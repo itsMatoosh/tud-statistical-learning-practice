@@ -1,0 +1,6 @@
+Finished Cross-validation with with pca features.
+Cross-val Accuracy: 0.70 (0.00 std)
+Test set accuracy: 0.55
+Finished Cross-validation with with sift features.
+Cross-val Accuracy: 0.67 (0.00 std)
+Test set accuracy: 0.52

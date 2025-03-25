@@ -1,0 +1,47 @@
+starting experiment
+Training with pca features with shape: (72219, 50)
+Initialization 0
+  Iteration 10
+  Iteration 20
+Initialization converged: True
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Finished Cross-validation with with pca features.
+Cross-val Accuracy: -220.90 (0.20 std)
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Accuracy against manual labels: 0.57
+Training with sift features with shape: (72219, 500)
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Initialization 0
+  Iteration 10
+  Iteration 20
+Initialization converged: True
+Finished Cross-validation with with sift features.
+Cross-val Accuracy: 945.11 (0.39 std)
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Accuracy against manual labels: 0.50

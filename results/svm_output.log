@@ -1,0 +1,3 @@
+Training with flat features with shape: (10001, 76800)
+Finished Cross-validation with with flat features.
+Cross-val Accuracy: 0.51 (0.01 std)

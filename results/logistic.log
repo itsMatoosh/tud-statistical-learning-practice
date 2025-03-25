@@ -1,0 +1,19 @@
+Starting auto-generated data experiment
+Training with pca features with shape: (72219, 50)
+Finished Cross-validation with with pca features.
+Cross-val Accuracy: 0.69 (0.01 std)
+Accuracy with manual labels: 0.53
+Training with sift features with shape: (72219, 500)
+Finished Cross-validation with with sift features.
+Cross-val Accuracy: 0.67 (0.00 std)
+Accuracy with manual labels: 0.52
+Starting manual data experiment
+Training with pca features with shape: (10001, 50)
+Finished Cross-validation with with pca features.
+Cross-val Accuracy: 0.63 (0.01 std)
+Training with sift features with shape: (10001, 500)
+Finished Cross-validation with with sift features.
+Cross-val Accuracy: 0.50 (0.00 std)
+Training with flat features with shape: (10001, 76800)
+Finished Cross-validation with with flat features.
+Cross-val Accuracy: 0.50 (0.01 std)
