@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.preprocessing import StandardScaler
 
 RNG=42
-features = ['pca', 'sift', 'flat']
+features = ['pca', 'sift']
 
 y_train = np.load("processed_data/y_train.npy")
 y_test = np.load("processed_data/y_test.npy")
@@ -21,8 +21,7 @@ for feature in features:
 
     print(f"Training with {feature} features with shape: {X.shape}")
     model = make_model()
-    n_jobs = None if feature == 'flat' else -1
-    scores = cross_val_score(model, X, y_train, cv=5, n_jobs=n_jobs)
+    scores = cross_val_score(model, X, y_train, cv=5, n_jobs=-1)
     print(f"Finished Cross-validation with with {feature} features.\nCross-val Accuracy: {scores.mean():.2f} ({scores.std():.2f} std)")
 
     with open(f"processed_data/X_test_{feature}.pkl", "rb") as f:
@@ -44,3 +43,4 @@ for feature in features:
     model = make_model()
     scores = cross_val_score(model, X, y_test, cv=5, n_jobs=-1)
     print(f"Finished Cross-validation with with {feature} features.\nCross-val Accuracy: {scores.mean():.2f} ({scores.std():.2f} std)")
+

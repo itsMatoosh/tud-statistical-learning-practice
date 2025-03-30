@@ -18,7 +18,7 @@ n_classes = len(np.unique(y_test))
 class GMMClassifier(ClusterMixin, BaseEstimator):
     def __init__(self, n_components=2):
         self.n_components = n_components
-        self.gmm = GaussianMixture(n_components=n_components, covariance_type='full', random_state=RNG)
+        self.gmm = GaussianMixture(n_components=len(np.unique(y_test)), covariance_type='full', random_state=RNG, verbose=1)
 
     def fit(self, X, y=None):
         self.gmm.fit(X)
@@ -40,7 +40,18 @@ class GMMClassifier(ClusterMixin, BaseEstimator):
         return accuracy_score(y, mapped_preds)
 
 
-def make_model(): return GMMClassifier(n_components=n_classes)
+def make_model(): return GMMClassifier()
+
+
+print("Starting with just manual flat features")
+
+with open(f"processed_data/X_test_flat.pkl", "rb") as f:
+    X_test = pickle.load(f)
+
+model = make_model()
+scores = cross_val_score(model, X_test, y_test, cv=5, scoring='accuracy', verbose=1)
+print(f"Finished Cross-validation with with manual flat features.\nCross-val Accuracy: {scores.mean():.2f} ({scores.std():.2f} std)")
+
 
 print("Starting auto-generated data experiment")
 
@@ -50,7 +61,7 @@ for feature in features:
 
     print(f"Training with {feature} features with shape: {X.shape}")
     model = make_model()
-    scores = cross_val_score(model, X, y_train, cv=5, n_jobs=-1, scoring='accuracy')
+    scores = cross_val_score(model, X, y_train, cv=5, n_jobs=-1, scoring='accuracy', verbose=1)
     print(f"Finished Cross-validation with with {feature} features.\nCross-val Accuracy: {scores.mean():.2f} ({scores.std():.2f} std)")
 
     with open(f"processed_data/X_test_{feature}.pkl", "rb") as f:
@@ -69,15 +80,6 @@ for feature in features:
 
     print(f"Training with {feature} features with shape: {X.shape}")
     model = make_model()
-    scores = cross_val_score(model, X, y_test, cv=5, n_jobs=-1, scoring='accuracy')
+    scores = cross_val_score(model, X, y_test, cv=5, n_jobs=-1, scoring='accuracy', verbose=1)
 
     print(f"Finished Cross-validation with with {feature} features.\nCross-val Accuracy: {scores.mean():.2f} ({scores.std():.2f} std)")
-
-print("Starting with just flat features")
-
-with open(f"processed_data/X_test_flat.pkl", "rb") as f:
-    X_test = pickle.load(f)
-
-model = make_model()
-scores = cross_val_score(model, X_test, y_test, cv=5, scoring='accuracy')
-print(f"Finished Cross-validation with with manual flat features.\nCross-val Accuracy: {scores.mean():.2f} ({scores.std():.2f} std)")
