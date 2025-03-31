@@ -1,0 +1,3 @@
+Fitting 5 folds for each of 600 candidates, totalling 3000 fits
+Best params: {'C': 0.25, 'fit_intercept': True, 'l1_ratio': 0.0, 'penalty': None, 'tol': 0.001}
+ Best score: 0.6891815366484351
