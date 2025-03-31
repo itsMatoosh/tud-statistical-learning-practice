@@ -1,0 +1,20 @@
+
+The following have been reloaded with a version change:
+  1) openblas/0.3.24_threads_openmp => openblas/0.3.24_threads_none
+  2) py-numpy/1.24.0 => py-numpy/1.26.1
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 out of   5 | elapsed:    3.9s remaining:    5.9s
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:    4.6s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 out of   5 | elapsed:   53.0s remaining:  1.3min
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:  1.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 out of   5 | elapsed:    0.3s remaining:    0.4s
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:    0.3s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done   2 out of   5 | elapsed:    3.5s remaining:    5.2s
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:    5.9s finished
+slurmstepd: error: *** STEP 6265107.0 ON mem003 CANCELLED AT 2025-03-27T02:01:05 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 122 seconds for job step to finish.
+slurmstepd: error: *** JOB 6265107 ON mem003 CANCELLED AT 2025-03-27T02:01:05 DUE TO TIME LIMIT ***
