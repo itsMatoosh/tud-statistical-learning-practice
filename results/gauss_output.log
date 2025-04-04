@@ -1,0 +1,85 @@
+Starting auto-generated data experiment
+Training with pca features with shape: (72219, 50)
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization 0
+  Iteration 10
+  Iteration 10
+  Iteration 10
+  Iteration 10
+  Iteration 10
+Initialization converged: True
+Initialization converged: True
+Initialization converged: True
+Initialization converged: True
+  Iteration 20
+Initialization converged: True
+Finished Cross-validation with with pca features.
+Cross-val Accuracy: 0.40 (0.14 std)
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Accuracy against manual labels: 0.57
+Training with sift features with shape: (72219, 500)
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization 0
+  Iteration 10
+  Iteration 10
+  Iteration 10
+  Iteration 10
+  Iteration 10
+Initialization converged: True
+Initialization converged: True
+Initialization converged: True
+  Iteration 20
+  Iteration 20
+Initialization converged: True
+Initialization converged: True
+Finished Cross-validation with with sift features.
+Cross-val Accuracy: 0.50 (0.03 std)
+Initialization 0
+  Iteration 10
+Initialization converged: True
+Accuracy against manual labels: 0.52
+Starting manual data experiment
+Training with pca features with shape: (10001, 50)
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization 0
+  Iteration 10
+  Iteration 10
+  Iteration 10
+  Iteration 10
+  Iteration 10
+Initialization converged: True
+Initialization converged: True
+Initialization converged: True
+Initialization converged: True
+Initialization converged: True
+Finished Cross-validation with with pca features.
+Cross-val Accuracy: 0.48 (0.09 std)
+Training with sift features with shape: (10001, 500)
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization 0
+Initialization converged: True
+Initialization converged: True
+  Iteration 10
+  Iteration 10
+  Iteration 10
+Initialization converged: True
+Initialization converged: True
+Initialization converged: True
+Finished Cross-validation with with sift features.
+Cross-val Accuracy: 0.50 (0.01 std)
+Starting with just flat features
+Initialization 0
